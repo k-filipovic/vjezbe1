@@ -19,8 +19,11 @@ def tocke(k1, k2):
         y=k*x+l
         plt.grid()
         plt.plot(x, y)
-        plt.savefig("graf.pdf")
-        plt.show()
+        n=int(input('Zelite li graf spremiti u pdf ili samo prikazati? Upisite broj 1 za spremanje i 2 za prikaz'))
+        if n==1:
+            plt.savefig("graf.pdf")
+        if n==2:
+            plt.show()
         
     graf(k1, k2)
 
