@@ -1,3 +1,7 @@
-v0=20
-kut=45
-koor=[1,1]
+import particle as prt
+p=prt.particle(10, 45, [1,1])
+p.range()
+p.plot_trajectory()
+
+
+
