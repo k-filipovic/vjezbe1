@@ -2,9 +2,11 @@ import math
 import numpy as np
 
 class Projectile:
-    def __init__(self, v, k, m, x, y, b=0.1):
+    def __init__(self, v, k, m, x, y, rho=1.225, c=0.5, r=0.06):
+        A=(r**2)*math.pi
+        b=0.5*rho*c*A
+        self.b=b              #koef. otpora zraka
         self.v=v
-        self.b=b #koef. otpora zraka
         self.k=math.radians(k)
         self.m=m
         self.v0=v
@@ -91,4 +93,5 @@ class Projectile:
         plt.title('Gibanje čestice sa otporom zraka')
         plt.plot(self.x_eul,self.y_eul,label='Eulerova metoda',linestyle='--',color='red')
         plt.plot(self.x_r4,self.y_r4,label='Runge-Kutta (R4)',linewidth=2,color='blue')
+        plt.legend()
         return plt.show()
