@@ -75,7 +75,7 @@ class Projectile:
 
     
     def graf(self):
-        dt=0.01
+        dt=0.001
         while self.y >= 0:      #pomičemo česticu sve dok ne padne na tlo za neki dt
             self.__Euler(dt)
 
